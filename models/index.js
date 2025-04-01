@@ -11,11 +11,6 @@ const connection = {
   port: process.env.DB_PORT,
   dialect: process.env.DIALECT,
   dialectModule: require("mysql2"),
-  dialectOptions: {
-    ssl: {
-      rejectUnauthorized: true,
-    },
-  },
 };
 const sequelize = new Sequelize(connection);
 const db = {};
